@@ -2,5 +2,14 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("О сервисе");
 ?><p>
-	Страница "<u>О сервисе</u>" предназначена для предоставления информации о нашем сервисе, его <b>преимуществах</b> и<b> возможностях</b>. Здесь пользователи могут узнать о том, что мы делаем, какие услуги мы предлагаем и как они могут воспользоваться нашим сервисом.
+	 <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_RECURSIVE" => "Y",
+		"AREA_FILE_SHOW" => "sect",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => ""
+	)
+);?><br>
 </p><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
