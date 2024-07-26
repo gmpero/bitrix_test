@@ -1,40 +1,39 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
 $aMenuLinks = Array(
 	Array(
-		"Компания", 
-		"company/", 
+		"Главная страница", 
+		"index.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Новости", 
-		"news/", 
+		"Объявления", 
+		"/ads/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Продукция", 
-		"products/", 
+		"О сервисе", 
+		"/info/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Услуги", 
-		"services/", 
+		"ЛК продавца", 
+		"/lk-seller/", 
 		Array(), 
 		Array(), 
-		"" 
+		"CSite::InGroup(array(1,8))" 
 	),
 	Array(
-		"Контакты", 
-		"contacts/", 
+		"ЛК покупателя", 
+		"/lk-buyer/", 
 		Array(), 
 		Array(), 
-		"" 
+		"CSite::InGroup(array(1,7))" 
 	)
 );
 ?>
