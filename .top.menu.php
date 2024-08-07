@@ -1,10 +1,10 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Главная страница", 
+		"Главная", 
 		"index.php", 
 		Array(), 
-		Array(), 
+		Array("selected"=>"true"), 
 		"" 
 	),
 	Array(

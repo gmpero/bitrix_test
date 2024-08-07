@@ -123,57 +123,32 @@ IncludeTemplateLangFile(__FILE__);
                         <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
                                                                                       class="site-menu-toggle js-menu-toggle text-black"><span
                                         class="icon-menu h3"></span></a></div>
-
-                        <ul class="site-menu js-clone-nav d-none d-lg-block">
-                            <!--   Меню  -->
-                            <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	".default", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "left",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "7776000",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?>
-                            <!--                            -->
-                            <li class="active">
-                                <a href="index.php">Home</a>
-                            </li>
-                            <li class="has-children">
-                                <a href="/properties.html">Properties</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Buy</a></li>
-                                    <li><a href="#">Rent</a></li>
-                                    <li><a href="#">Lease</a></li>
-                                    <li class="has-children">
-                                        <a href="#">Menu</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Menu One</a></li>
-                                            <li><a href="#">Menu Two</a></li>
-                                            <li><a href="#">Menu Three</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
+                        <!--   Меню  -->
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "top_multi",
+                            array(
+                                "ALLOW_MULTI_SELECT" => "N",
+                                "CHILD_MENU_TYPE" => "left",
+                                "DELAY" => "N",
+                                "MAX_LEVEL" => "2",
+                                "MENU_CACHE_GET_VARS" => array(),
+                                "MENU_CACHE_TIME" => "7776000",
+                                "MENU_CACHE_TYPE" => "N",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "ROOT_MENU_TYPE" => "top",
+                                "USE_EXT" => "N",
+                                "COMPONENT_TEMPLATE" => "top_multi"
+                            ),
+                            false
+                        ); ?>
                 </div>
-
-
+                <!--                            -->
+                </nav>
             </div>
+
+
         </div>
     </div>
+</div>
 </div>
