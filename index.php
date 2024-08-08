@@ -1,4 +1,5 @@
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php"); ?>
+<? global $APPLICATION;
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php"); ?>
 
     <!--СЛАЙДЕР-->
     <div class="slide-one-item home-slider owl-carousel">
