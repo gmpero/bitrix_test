@@ -29,22 +29,25 @@ IncludeTemplateLangFile(__FILE__);
                     <div class="col-md-12">
                         <h3 class="footer-heading mb-4"> <?= GetMessage("Navigations") ?></h3>
                     </div>
-                    <? $APPLICATION->IncludeComponent("bitrix:menu", "menu_footer", array(
-                        "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
-                        "CHILD_MENU_TYPE" => "left",    // Тип меню для остальных уровней
-                        "DELAY" => "N",    // Откладывать выполнение шаблона меню
-                        "MAX_LEVEL" => "1",    // Уровень вложенности меню
-                        "MENU_CACHE_GET_VARS" => array(    // Значимые переменные запроса
-                            0 => "",
-                        ),
-                        "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
-                        "MENU_CACHE_TYPE" => "N",    // Тип кеширования
-                        "MENU_CACHE_USE_GROUPS" => "Y",    // Учитывать права доступа
-                        "ROOT_MENU_TYPE" => "top",    // Тип меню для первого уровня
-                        "USE_EXT" => "N",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
-                    ),
-                        false
-                    ); ?>
+                    <? $APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"menu_footer", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "N",
+		"COMPONENT_TEMPLATE" => "menu_footer"
+	),
+	false
+); ?>
                 </div>
             </div>
 
