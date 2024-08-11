@@ -1,7 +1,5 @@
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-global $APPLICATION;
-$APPLICATION->SetTitle("Моя страница");
 IncludeTemplateLangFile(__FILE__);
 ?>
 
@@ -10,27 +8,25 @@ IncludeTemplateLangFile(__FILE__);
 <html lang="<?= LANGUAGE_ID ?>">
 
     <head>
-        <title><?php $APPLICATION->showTitle(); ?></title>
-        <?php $APPLICATION->showHead() ?>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <?php
+        <title><?php $APPLICATION->ShowTitle(); ?></title>
+        <?php $APPLICATION->ShowHead();
+
         $asset = \Bitrix\Main\Page\Asset::getInstance();
         $asset->addCss('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500');
-        $asset->addCss('/local/templates/.default/fonts/icomoon/style.css');
-        $asset->addCss('/local/templates/.default/css/bootstrap.min.css');
-        $asset->addCss('/local/templates/.default/css/magnific-popup.css');
-        $asset->addCss('/local/templates/.default/css/jquery-ui.css');
-        $asset->addCss('/local/templates/.default/css/owl.carousel.min.css');
-        $asset->addCss('/local/templates/.default/css/owl.theme.default.min.css');
-        $asset->addCss('/local/templates/.default/css/bootstrap-datepicker.css');
-        $asset->addCss('/local/templates/.default/css/mediaelementplayer.css');
-        $asset->addCss('/local/templates/.default/css/animate.css');
-        $asset->addCss('/local/templates/.default/fonts/flaticon/font/flaticon.css');
-        $asset->addCss('/local/templates/.default/css/fl-bigmug-line.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/fonts/icomoon/style.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/magnific-popup.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/jquery-ui.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.min.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/owl.theme.default.min.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap-datepicker.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/mediaelementplayer.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/animate.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/fonts/flaticon/font/flaticon.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/fl-bigmug-line.css');
 
-        $asset->addCss('/local/templates/.default/css/aos.css');
-        $asset->addCss('/local/templates/.default/css/style.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/aos.css');
+        $asset->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
         ?>
 
     </head>
@@ -153,23 +149,23 @@ IncludeTemplateLangFile(__FILE__);
 
 <? if ($APPLICATION->GetCurPage(false) !== '/'): ?>
     <div class="site-blocks-cover inner-page-cover overlay"
-         style="background-image: url(/local/templates/.default/images/hero_bg_2.jpg);"
+         style="background-image: url(<?= SITE_TEMPLATE_PATH . '/images/hero_bg_2.jpg' ?>);"
          data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
                 <div class="col-md-10">
                     <h1 class="mb-2"><?php $APPLICATION->showTitle(); ?></h1>
                     <? $APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	"chain", 
-	array(
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0",
-		"COMPONENT_TEMPLATE" => "chain"
-	),
-	false
-); ?>
+                        "bitrix:breadcrumb",
+                        "chain",
+                        array(
+                            "PATH" => "",
+                            "SITE_ID" => "s1",
+                            "START_FROM" => "0",
+                            "COMPONENT_TEMPLATE" => "chain"
+                        ),
+                        false
+                    ); ?>
                 </div>
             </div>
         </div>

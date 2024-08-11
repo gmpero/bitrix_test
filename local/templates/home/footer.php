@@ -1,3 +1,8 @@
+<?php
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+IncludeTemplateLangFile(__FILE__);
+?>
+
 <footer class="site-footer">
     <div class="container">
         <div class="row">
@@ -22,7 +27,7 @@
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <div class="row mb-5">
                     <div class="col-md-12">
-                        <h3 class="footer-heading mb-4">Navigations</h3>
+                        <h3 class="footer-heading mb-4"> <?= GetMessage("Navigations") ?></h3>
                     </div>
                     <? $APPLICATION->IncludeComponent("bitrix:menu", "menu_footer", array(
                         "ALLOW_MULTI_SELECT" => "N",    // Разрешить несколько активных пунктов одновременно
@@ -80,20 +85,20 @@
 </footer>
 
 <?php
-$asset->addJs('/local/templates/.default/js/jquery-3.3.1.min.js');
-$asset->addJs('/local/templates/.default/js/jquery-migrate-3.0.1.min.js');
-$asset->addJs('/local/templates/.default/js/jquery-ui.js');
-$asset->addJs('/local/templates/.default/js/popper.min.js');
-$asset->addJs('/local/templates/.default/js/bootstrap.min.js');
-$asset->addJs('/local/templates/.default/js/owl.carousel.min.js');
-$asset->addJs('/local/templates/.default/js/mediaelement-and-player.min.js');
-$asset->addJs('/local/templates/.default/js/jquery.stellar.min.js');
-$asset->addJs('/local/templates/.default/js/jquery.countdown.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.3.1.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery-migrate-3.0.1.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery-ui.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/popper.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/owl.carousel.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/mediaelement-and-player.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery.stellar.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery.countdown.min.js');
 
-$asset->addJs('/local/templates/.default/js/jquery.magnific-popup.min.js');
-$asset->addJs('/local/templates/.default/js/bootstrap-datepicker.min.js');
-$asset->addJs('/local/templates/.default/js/aos.js');
-$asset->addJs('/local/templates/.default/js/main.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery.magnific-popup.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap-datepicker.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/aos.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
 ?>
 
 </body>
