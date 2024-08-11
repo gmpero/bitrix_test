@@ -1,5 +1,8 @@
 <? global $APPLICATION;
-require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php"); ?>
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+//$APPLICATION->SetPageProperty("title", "Главная");
+$APPLICATION->SetTitle("Главная");
+?>
 
     <!--СЛАЙДЕР-->
     <div class="slide-one-item home-slider owl-carousel">

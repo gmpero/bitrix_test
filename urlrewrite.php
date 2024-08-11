@@ -50,9 +50,9 @@ $arUrlRewrite=array (
   ),
   16 => 
   array (
-    'CONDITION' => '#^/ads/#',
+    'CONDITION' => '#^#',
     'RULE' => '',
-    'ID' => 'bitrix:news',
+    'ID' => 'bitrix:main.pagenavigation',
     'PATH' => '/ads/index.php',
     'SORT' => 100,
   ),

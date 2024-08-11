@@ -14,14 +14,13 @@ IncludeTemplateLangFile(__FILE__);
         <?php $APPLICATION->showHead() ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <?php
         $asset = \Bitrix\Main\Page\Asset::getInstance();
         $asset->addCss('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500');
         $asset->addCss('/local/templates/.default/fonts/icomoon/style.css');
         $asset->addCss('/local/templates/.default/css/bootstrap.min.css');
         $asset->addCss('/local/templates/.default/css/magnific-popup.css');
-        $asset->addCss('/local/templates/.default/css/jquery-uicss');
+        $asset->addCss('/local/templates/.default/css/jquery-ui.css');
         $asset->addCss('/local/templates/.default/css/owl.carousel.min.css');
         $asset->addCss('/local/templates/.default/css/owl.theme.default.min.css');
         $asset->addCss('/local/templates/.default/css/bootstrap-datepicker.css');
@@ -161,14 +160,16 @@ IncludeTemplateLangFile(__FILE__);
                 <div class="col-md-10">
                     <h1 class="mb-2"><?php $APPLICATION->showTitle(); ?></h1>
                     <? $APPLICATION->IncludeComponent(
-                        "bitrix:breadcrumb",
-                        "chain",
-                        array(
-                            "PATH" => "",
-                            "SITE_ID" => "s1",
-                            "START_FROM" => "0",
-                        )
-                    ); ?>
+	"bitrix:breadcrumb", 
+	"chain", 
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "chain"
+	),
+	false
+); ?>
                 </div>
             </div>
         </div>

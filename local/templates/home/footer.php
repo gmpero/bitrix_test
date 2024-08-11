@@ -95,6 +95,7 @@ $asset->addJs('/local/templates/.default/js/bootstrap-datepicker.min.js');
 $asset->addJs('/local/templates/.default/js/aos.js');
 $asset->addJs('/local/templates/.default/js/main.js');
 ?>
+
 </body>
 
 </html>
