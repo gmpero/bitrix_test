@@ -136,35 +136,37 @@ $APPLICATION->SetTitle("Главная");
                     <!--  ИБ "Объявления  -->
                     <?
                     $APPLICATION->IncludeComponent(
-                        "bitrix:news.line",
-                        "list_houses",
-                        array(
-                            "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                            "CACHE_GROUPS" => "Y",
-                            "CACHE_TIME" => "604800",
-                            "CACHE_TYPE" => "A",
-                            "DETAIL_URL" => "#SITE_DIR#/ads/#ELEMENT_CODE#/",
-                            "FIELD_CODE" => array(
-                                0 => "CODE",
-                                1 => "NAME",
-                                2 => "PREVIEW_PICTURE",
-                                3 => "PROPERTY_PRICE",
-                                4 => "PROPERTY_TOTAL_AREA",
-                                5 => "PROPERTY_FLOOR_COUNT",
-                                6 => "PROPERTY_BATHROOM_COUNT",
-                                7 => "PROPERTY_HAS_GARAGE",
-                            ),
-                            "IBLOCKS" => array(),
-                            "IBLOCK_TYPE" => "ads",
-                            "NEWS_COUNT" => "9",
-                            "SORT_BY1" => "ACTIVE_FROM",
-                            "SORT_BY2" => "SORT",
-                            "SORT_ORDER1" => "DESC",
-                            "SORT_ORDER2" => "ASC",
-                            "COMPONENT_TEMPLATE" => "list_houses"
-                        ),
-                        false
-                    ); ?>
+	"bitrix:news.line", 
+	"list_houses", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "172 800",
+		"CACHE_TYPE" => "A",
+		"DETAIL_URL" => "#SITE_DIR#/ads/#ELEMENT_CODE#/",
+		"FIELD_CODE" => array(
+			0 => "CODE",
+			1 => "NAME",
+			2 => "PREVIEW_PICTURE",
+			3 => "PROPERTY_PRICE",
+			4 => "PROPERTY_TOTAL_AREA",
+			5 => "PROPERTY_FLOOR_COUNT",
+			6 => "PROPERTY_BATHROOM_COUNT",
+			7 => "PROPERTY_HAS_GARAGE",
+			8 => "",
+		),
+		"IBLOCKS" => array(
+		),
+		"IBLOCK_TYPE" => "ads",
+		"NEWS_COUNT" => "9",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"COMPONENT_TEMPLATE" => "list_houses"
+	),
+	false
+); ?>
                     <!-- -->
                 </div>
 
