@@ -1,17 +1,11 @@
-<div class="site-section-title mb-3">
-	<h2>Наши контакты</h2>
-</div>
-<p>
-	 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus in cum odio.
-</p>
+<div class="p-4 mb-3 bg-white">
+    <h3 class="h6 text-black mb-3 text-uppercase">Contact Info</h3>
+    <p class="mb-0 font-weight-bold">Address</p>
+    <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
 
-<h3>Телефоны</h3>
-<ul>
-	<li>+7 (495) 123-45-67</li>
-	<li>+7 (495) 765-43-21</li>
-</ul>
-<h3>Email</h3>
-<ul>
-	<li>info@test.ru</li>
-	<li>support@test.ru</li>
-</ul>
+    <p class="mb-0 font-weight-bold">Phone</p>
+    <p class="mb-4"><a href="#">+1 234 567 89</a></p>
+
+    <p class="mb-0 font-weight-bold">Email Address</p>
+    <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+</div>
