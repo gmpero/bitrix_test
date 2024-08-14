@@ -13,7 +13,6 @@
 $this->setFrameMode(true);
 ?>
 
-
 <div class="site-blocks-cover overlay" style="background-image: url(<?= $arResult["DETAIL_PICTURE"]["SRC"] ?>);"
      data-aos="fade"
      data-stellar-background-ratio="0.5">

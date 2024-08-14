@@ -2,6 +2,11 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 $arTemplateParameters = array(
+	"TITLE_BLOCK" => Array(
+		"NAME" => "Установить заголовок блока",
+		"TYPE" => "TEXT",
+		"DEFAULT" => "Default title",
+	),
 	"DISPLAY_DATE" => Array(
 		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_DATE"),
 		"TYPE" => "CHECKBOX",
