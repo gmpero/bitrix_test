@@ -27,11 +27,10 @@ $this->setFrameMode(true);
             <? endif; ?>
             <div class="text">
                 <h2><?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?></h2>
-                <p class="location"><span class="property-icon icon-room"></span> Los Angeles, CA 90005</p>
-                <p class="mb-2"><strong><?= $arItem["PROPERTIES"]["PRICE"]["VALUE"] ?></strong></p>
+                <p class="location"><span class="property-icon icon-room"></span><?=GetMessage('CT_BNL_CYTI')?></p>
+                <p class="mb-2"><strong><?= $arItem["DISPLAY_PROPERTIES"]["PRICE"]["VALUE"] ?></strong></p>
                 <p class="mb-0"><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"
-                                   class="text-uppercase small letter-spacing-1 font-weight-bold">More
-                        Details</a>
+                                   class="text-uppercase small letter-spacing-1 font-weight-bold"><?=GetMessage("CT_BNL_MORE");?></a>
                 </p>
 
             </div>

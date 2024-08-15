@@ -28,24 +28,24 @@ $this->setFrameMode(true);
                 <div class="inner">
                     <span class="price rounded"><?= $arItem["PROPERTY_PRICE_VALUE"] ?></span>
                     <h3 class="title"><? echo $arItem["NAME"] ?></h3>
-                    <p class="location">Los Angeles, CA 90005</p>
+                    <p class="location"><?=GetMessage("CT_BNL_CYTI")?></p>
                 </div>
                 <div class="prop-more-info">
                     <div class="inner d-flex">
                         <div class="col">
-                            <span>Площадь:</span>
+                            <span><?=GetMessage("CT_BNL_AREA")?></span>
                             <strong><?= $arItem["PROPERTY_TOTAL_AREA_VALUE"] ?><sup>2</sup></strong>
                         </div>
                         <div class="col">
-                            <span>Этажей:</span>
+                            <span><?=GetMessage("CT_BNL_FLOOR")?></span>
                             <strong><?= $arItem["PROPERTY_FLOOR_COUNT_VALUE"] ?></strong>
                         </div>
                         <div class="col">
-                            <span>Санузлов:</span>
+                            <span><?=GetMessage("CT_BNL_BATHROOM_COUNT")?></span>
                             <strong><?= $arItem["PROPERTY_BATHROOM_COUNT_VALUE"] ?></strong>
                         </div>
                         <div class="col">
-                            <span>Гараж:</span>
+                            <span><?=GetMessage("CT_BNL_HAS_GARAGE")?></span>
                             <strong><?= $arItem["PROPERTY_HAS_GARAGE_VALUE"] ?></strong>
                         </div>
                     </div>

@@ -60,7 +60,8 @@ $APPLICATION->SetTitle("Главная");
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
 			0 => "PRIORITY_DEAL",
-			1 => "",
+			1 => "PRICE",
+			2 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -198,7 +199,7 @@ $APPLICATION->SetTitle("Главная");
                             "DETAIL_URL" => "#SITE_DIR#/services/#ELEMENT_CODE#/",
                             "FIELD_CODE" => array(
                                 0 => "CODE",
-                                1 => "",
+                                1 => "PROPERTY_LINK_SERVICES",
                             ),
                             "IBLOCKS" => array(
                                 0 => "6",

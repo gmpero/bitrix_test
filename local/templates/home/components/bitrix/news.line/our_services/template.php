@@ -19,10 +19,10 @@ $this->setFrameMode(true);
     $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
     ?>
     <div class="col-md-6 col-lg-4 mb-4" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-        <a href="<? echo $arItem["DETAIL_PAGE_URL"] ?>" class="service text-center border rounded">
+        <a href="<? echo $arItem["PROPERTY_LINK_SERVICES_VALUE"] ?>" class="service text-center border rounded">
             <span class="icon flaticon-house"></span>
             <h2 class="service-heading"><? echo $arItem["NAME"] ?></h2>
-            <p><span class="read-more">Learn More</span></p>
+            <p><span class="read-more"><?=GetMessage("CT_BNL_LEARN_MORE")?></span></p>
         </a>
     </div>
 <?php endforeach; ?>
