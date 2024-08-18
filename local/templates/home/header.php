@@ -111,18 +111,6 @@ IncludeTemplateLangFile(__FILE__);
                             <a href="/login" class="btn btn-primary btn-sm">Войти</a>
                         <? endif; ?>
                     </div>
-                    <!-- Форма входа не СИСТЕМНЫЙ КОМПОНЕНТ -->
-                    <!--                    --><? //$APPLICATION->IncludeComponent(
-                    //                        "bitrix:main.auth.form",
-                    //                        "login-main",
-                    //                        array(
-                    //                            "COMPONENT_TEMPLATE" => "login-main",
-                    //                            "AUTH_FORGOT_PASSWORD_URL" => "/user",
-                    //                            "AUTH_REGISTER_URL" => "/user/registr.php",
-                    //                            "AUTH_SUCCESS_URL" => "/"
-                    //                        ),
-                    //                        false
-                    //                    );?>
                 </div>
             </div>
 
