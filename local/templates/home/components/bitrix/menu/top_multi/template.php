@@ -15,8 +15,7 @@ foreach ($arResult
     <? if ($arItem["IS_PARENT"]): ?>
 
     <? if ($arItem["DEPTH_LEVEL"] == 1): ?>
-    <li class="has-children <?= $arItem["SELECTED"] ? 'active' : ''; ?>"><a href="<?= $arItem["LINK"] ?>"
-                                                                            class="<? if ($arItem["SELECTED"]): ?>root-item-selected<? else: ?>root-item<? endif ?>"><?= $arItem["TEXT"] ?></a>
+    <li class="has-children <?= $arItem["SELECTED"] ? 'active' : ''; ?>"><a href="<?= $arItem["LINK"] ?>"><?= $arItem["TEXT"] ?></a>
     <ul class="dropdown">
     <? else: ?>
     <li class="<?= $arItem["SELECTED"] ? 'active' : ''; ?>"><a href="<?= $arItem["LINK"] ?>"
@@ -29,8 +28,7 @@ foreach ($arResult
         <? if ($arItem["PERMISSION"] > "D"): ?>
 
             <? if ($arItem["DEPTH_LEVEL"] == 1): ?>
-                <li class="<?= $arItem["SELECTED"] ? 'active' : ''; ?>"><a href="<?= $arItem["LINK"] ?>"
-                                                                           class="<? if ($arItem["SELECTED"]): ?>root-item-selected<? else: ?>root-item<? endif ?>"><?= $arItem["TEXT"] ?></a>
+                <li class="<?= $arItem["SELECTED"] ? 'active' : ''; ?>"><a href="<?= $arItem["LINK"] ?>"><?= $arItem["TEXT"] ?></a>
                 </li>
             <? else: ?>
                 <li class="<?= $arItem["SELECTED"] ? 'item-selected' : ''; ?>"><a
@@ -40,7 +38,7 @@ foreach ($arResult
         <? else: ?>
 
             <? if ($arItem["DEPTH_LEVEL"] == 1): ?>
-                <li><a href="" class="<? if ($arItem["SELECTED"]): ?>root-item-selected<? else: ?>root-item<? endif ?>"
+                <li><a href=""
                        title="<?= GetMessage("MENU_ITEM_ACCESS_DENIED") ?>"><?= $arItem["TEXT"] ?></a></li>
             <? else: ?>
                 <li><a href="" class="denied"

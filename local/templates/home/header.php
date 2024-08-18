@@ -77,7 +77,7 @@ IncludeTemplateLangFile(__FILE__);
                             ?>
                         </p>
                     </div>
-                    <div class="col-6 col-md-6 text-right">
+                    <div class="col-5 col-md-5 text-right">
                         <!-- Компонент соц. сетей -->
                         <? $APPLICATION->IncludeComponent(
                             "bitrix:main.include",
@@ -91,6 +91,38 @@ IncludeTemplateLangFile(__FILE__);
                         );
                         ?>
                     </div>
+                    <div class="col-1 col-md-1 text-right">
+                        <? if ($USER->IsAuthorized()) : ?>
+                            <?
+                            // ссылка для выхода из личного кабинета
+                            $logout = $APPLICATION->GetCurPageParam(
+                                "logout=yes&" . bitrix_sessid_get(),
+                                array(
+                                    "login",
+                                    "logout",
+                                    "register",
+                                    "forgot_password",
+                                    "change_password"
+                                )
+                            );
+                            ?>
+                            <a href="<?= $logout; ?>" class="btn btn-primary btn-sm">Выйти</a>
+                        <?php else: ?>
+                            <a href="/login" class="btn btn-primary btn-sm">Войти</a>
+                        <? endif; ?>
+                    </div>
+                    <!-- Форма входа не СИСТЕМНЫЙ КОМПОНЕНТ -->
+                    <!--                    --><? //$APPLICATION->IncludeComponent(
+                    //                        "bitrix:main.auth.form",
+                    //                        "login-main",
+                    //                        array(
+                    //                            "COMPONENT_TEMPLATE" => "login-main",
+                    //                            "AUTH_FORGOT_PASSWORD_URL" => "/user",
+                    //                            "AUTH_REGISTER_URL" => "/user/registr.php",
+                    //                            "AUTH_SUCCESS_URL" => "/"
+                    //                        ),
+                    //                        false
+                    //                    );?>
                 </div>
             </div>
 
@@ -120,24 +152,23 @@ IncludeTemplateLangFile(__FILE__);
                                             class="icon-menu h3"></span></a></div>
                             <!--   Меню  -->
                             <? $APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"top_multi", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "left",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "2",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "7776000",
-		"MENU_CACHE_TYPE" => "A",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => "top_multi"
-	),
-	false
-); ?>
+                                "bitrix:menu",
+                                "top_multi",
+                                array(
+                                    "ALLOW_MULTI_SELECT" => "N",
+                                    "CHILD_MENU_TYPE" => "left",
+                                    "DELAY" => "N",
+                                    "MAX_LEVEL" => "2",
+                                    "MENU_CACHE_GET_VARS" => array(),
+                                    "MENU_CACHE_TIME" => "7776000",
+                                    "MENU_CACHE_TYPE" => "A",
+                                    "MENU_CACHE_USE_GROUPS" => "Y",
+                                    "ROOT_MENU_TYPE" => "top",
+                                    "USE_EXT" => "N",
+                                    "COMPONENT_TEMPLATE" => "top_multi"
+                                ),
+                                false
+                            ); ?>
                         </nav>
                     </div>
                 </div>

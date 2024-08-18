@@ -8,13 +8,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Объявления", 
-		"/ads/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"О сервисе", 
 		"/info/", 
 		Array(), 
@@ -34,6 +27,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(1,7))" 
+	),
+	Array(
+		"Объявления", 
+		"/ads/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
