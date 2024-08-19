@@ -19,10 +19,10 @@ $this->setFrameMode(true);
     <div class="container">
         <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-                <span class="d-inline-block text-white px-3 mb-3 property-offer-type rounded">Property Details of</span>
+                <span class="d-inline-block text-white px-3 mb-3 property-offer-type rounded"><?=GetMessage("CT_BNL_PROPERTY_DETAILS")?></span>
                 <h1 class="mb-2"><?= $arResult["NAME"]; ?></h1>
                 <p class="mb-5"><strong
-                            class="h2 text-success font-weight-bold"><?= $arResult["PROPERTIES"]["PRICE"]["VALUE"]; ?></strong>
+                            class="h2 text-success font-weight-bold"><?= $arResult["DISPLAY_PROPERTIES"]["PRICE"]["VALUE"]; ?></strong>
                 </p>
             </div>
         </div>
@@ -35,7 +35,7 @@ $this->setFrameMode(true);
             <div class="col-lg-8" style="margin-top: -150px;">
                 <div class="mb-5">
                     <div class="slide-one-item home-slider owl-carousel">
-                        <?php foreach ($arResult['PROPERTIES']['IMAGE_GALLERY']['VALUE'] as $item): ?>
+                        <?php foreach ($arResult['DISPLAY_PROPERTIES']['IMAGE_GALLERY']['VALUE'] as $item): ?>
                             <?php
                             // путь к изображению от корня сайта
                             $image = CFile::GetPath($item);
@@ -48,23 +48,23 @@ $this->setFrameMode(true);
                 <div class="bg-white">
                     <div class="row mb-5">
                         <div class="col-md-6">
-                            <strong class="text-success h1 mb-3"><?= $arResult["PROPERTIES"]["PRICE"]["VALUE"]; ?></strong>
+                            <strong class="text-success h1 mb-3"><?= $arResult["DISPLAY_PROPERTIES"]["PRICE"]["VALUE"]; ?></strong>
                         </div>
                         <div class="col-md-6">
                             <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
                                 <li>
-                                    <span class="property-specs">Дата обновления</span>
+                                    <span class="property-specs"><?=GetMessage("CT_BNL_PROPERTY_DATE")?></span>
                                     <span class="property-specs-number"><?= (new \Bitrix\Main\Type\DateTime($arItem['TIMESTAMP_X']))->format('d.m.Y'); ?></span>
 
                                 </li>
                                 <li>
-                                    <span class="property-specs">Кол-во этажей</span>
-                                    <span class="property-specs-number"><?= $arResult["PROPERTIES"]["FLOOR_COUNT"]["VALUE"] ?></span>
+                                    <span class="property-specs"><?=GetMessage("CT_BNL_FLOOR_COUNT")?></span>
+                                    <span class="property-specs-number"><?= $arResult["DISPLAY_PROPERTIES"]["FLOOR_COUNT"]["VALUE"] ?></span>
 
                                 </li>
                                 <li>
-                                    <span class="property-specs">Площадь</span>
-                                    <span class="property-specs-number"><?= $arResult["PROPERTIES"]["TOTAL_AREA"]["VALUE"]; ?><sup>2</sup></span>
+                                    <span class="property-specs"><?=GetMessage("CT_BNL_AREA")?></span>
+                                    <span class="property-specs-number"><?= $arResult["DISPLAY_PROPERTIES"]["TOTAL_AREA"]["VALUE"]; ?><sup>2</sup></span>
 
                                 </li>
                             </ul>
@@ -72,22 +72,22 @@ $this->setFrameMode(true);
                     </div>
                     <div class="row mb-5">
                         <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                            <span class="d-inline-block text-black mb-0 caption-text">Кол-во санузлов:</span>
-                            <strong class="d-block"><?= $arResult["PROPERTIES"]["BATHROOM_COUNT"]["VALUE"]; ?></strong>
+                            <span class="d-inline-block text-black mb-0 caption-text"><?=GetMessage("CT_BNL_BATHROOM_COUNT")?></span>
+                            <strong class="d-block"><?= $arResult["DISPLAY_PROPERTIES"]["BATHROOM_COUNT"]["VALUE"]; ?></strong>
                         </div>
                         <div class="col-md-6 col-lg-4 text-left border-bottom border-top py-3">
-                            <span class="d-inline-block text-black mb-0 caption-text">Наличие гаража:</span>
-                            <strong class="d-block"><?= $arResult["PROPERTIES"]["HAS_GARAGE"]["VALUE"]; ?></strong>
+                            <span class="d-inline-block text-black mb-0 caption-text"><?=GetMessage("CT_BNL_HAS_GARAGE")?></span>
+                            <strong class="d-block"><?= $arResult["DISPLAY_PROPERTIES"]["HAS_GARAGE"]["VALUE"] ? $arResult["DISPLAY_PROPERTIES"]["HAS_GARAGE"]["VALUE"] : 'Нет'; ?></strong>
                         </div>
                     </div>
-                    <h2 class="h4 text-black">More Info</h2>
+                    <h2 class="h4 text-black"><?=GetMessage("CT_BNL_PROPERTY_MORE_INFO")?></h2>
                     <?php echo $arResult["DETAIL_TEXT"]; ?>
 
                     <div class="row mt-5">
                         <div class="col-12">
-                            <h2 class="h4 text-black mb-3">Property Gallery</h2>
+                            <h2 class="h4 text-black mb-3"><?=GetMessage("CT_BNL_PROPERTY_GALLERY")?></h2>
                         </div>
-                        <?php foreach ($arResult['PROPERTIES']['IMAGE_GALLERY']['VALUE'] as $item): ?>
+                        <?php foreach ($arResult['DISPLAY_PROPERTIES']['IMAGE_GALLERY']['VALUE'] as $item): ?>
                             <?php
                             // путь к изображению от корня сайта
                             $image = CFile::GetPath($item);
@@ -102,12 +102,12 @@ $this->setFrameMode(true);
                     </div>
 
                     <!-- Дополнительные материалы -->
-                    <?php if (!empty($arResult['PROPERTIES']['ADDITIONAL_MATERIALS']['VALUE'])): ?>
+                    <?php if (!empty($arResult['DISPLAY_PROPERTIES']['ADDITIONAL_MATERIALS']['VALUE'])): ?>
                         <div class="row mt-5">
                             <div class="col-12">
-                                <h2 class="h4 text-black mb-3">Дополнительные материалы</h2>
+                                <h2 class="h4 text-black mb-3"><?=GetMessage("CT_BNL_PROPERTY_ADDITIONAL_MATERIALS")?></h2>
                             </div>
-                            <?php foreach ($arResult['PROPERTIES']['ADDITIONAL_MATERIALS']['VALUE'] as $item): ?>
+                            <?php foreach ($arResult['DISPLAY_PROPERTIES']['ADDITIONAL_MATERIALS']['VALUE'] as $item): ?>
                                 <?php
                                 // путь к изображению от корня сайта
                                 $image = CFile::GetPath($item);
@@ -122,12 +122,12 @@ $this->setFrameMode(true);
                         </div>
                     <?php endif; ?>
                     <!-- Ссылки на внешние ресурсы -->
-                    <?php if (!empty($arResult['PROPERTIES']['EXTERNAL_LINKS']['VALUE'])): ?>
+                    <?php if (!empty($arResult['DISPLAY_PROPERTIES']['EXTERNAL_LINKS']['VALUE'])): ?>
                         <div class="row mt-5">
                             <div class="col-12">
-                                <h2 class="h4 text-black mb-3">Ссылки на внешние ресурсы</h2>
+                                <h2 class="h4 text-black mb-3"><?=GetMessage("CT_BNL_PROPERTY_EXTERNAL_LINKS")?></h2>
                             </div>
-                            <?php foreach ($arResult['PROPERTIES']['EXTERNAL_LINKS']['VALUE'] as $item): ?>
+                            <?php foreach ($arResult['DISPLAY_PROPERTIES']['EXTERNAL_LINKS']['VALUE'] as $item): ?>
                                 <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
                                     <a href="<?= $item; ?>"><?= $item ?></a>
                                 </div>
