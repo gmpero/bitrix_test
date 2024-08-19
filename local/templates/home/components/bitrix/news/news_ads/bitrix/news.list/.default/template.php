@@ -135,24 +135,24 @@ $this->setFrameMode(true);
                             <div class="inner">
                                 <span class="price rounded"><?= $arItem["PROPERTY_PRICE_VALUE"] ?></span>
                                 <h3 class="title"><? echo $arItem["NAME"] ?></h3>
-                                <p class="location"><?=GetMessage("CT_BNL_CYTI")?></p>
+                                <p class="location"><?= GetMessage("CT_BNL_CYTI") ?></p>
                             </div>
                             <div class="prop-more-info">
                                 <div class="inner d-flex">
                                     <div class="col">
-                                        <span><?=GetMessage("CT_BNL_AREA")?></span>
+                                        <span><?= GetMessage("CT_BNL_AREA") ?></span>
                                         <strong><?= $arItem["PROPERTY_TOTAL_AREA_VALUE"] ?><sup>2</sup></strong>
                                     </div>
                                     <div class="col">
-                                        <span><?=GetMessage("CT_BNL_FLOOR")?></span>
+                                        <span><?= GetMessage("CT_BNL_FLOOR") ?></span>
                                         <strong><?= $arItem["PROPERTY_FLOOR_COUNT_VALUE"] ?></strong>
                                     </div>
                                     <div class="col">
-                                        <span><?=GetMessage("CT_BNL_BATHROOM_COUNT")?></span>
+                                        <span><?= GetMessage("CT_BNL_BATHROOM_COUNT") ?></span>
                                         <strong><?= $arItem["PROPERTY_BATHROOM_COUNT_VALUE"] ?></strong>
                                     </div>
                                     <div class="col">
-                                        <span><?=GetMessage("CT_BNL_HAS_GARAGE")?></span>
+                                        <span><?= GetMessage("CT_BNL_HAS_GARAGE") ?></span>
                                         <strong><?= $arItem["PROPERTY_HAS_GARAGE_VALUE"] ? $arItem["PROPERTY_HAS_GARAGE_VALUE"] : 'Нет'; ?></strong>
                                     </div>
                                 </div>
@@ -162,13 +162,16 @@ $this->setFrameMode(true);
                 </div>
             <? endforeach; ?>
         </div>
+        <!--пагинация-->
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="site-pagination">
                     <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
                         <?= $arResult["NAV_STRING"]; ?>
-                    <? endif; ?></div>
+                    <? endif; ?>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
