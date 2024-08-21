@@ -234,20 +234,7 @@ if ($arResult["SHOW_SMS_FIELD"] == true) {
                             /* CAPTCHA */
                             if ($arResult["USE_CAPTCHA"] == "Y") {
                                 ?>
-
                                 <h3><b><?= GetMessage("CAPTCHA_REGF_TITLE") ?></b></h3>
-
-
-                                <div class="row form-group">
-                                    <div class="col-md-12">
-                                        <label class="font-weight-bold" for="email"><span
-                                                    class="starrequired">*</span><? echo GetMessage("main_register_phone_number") ?>
-                                        </label>
-                                        <input type="text" name="USER_PHONE_NUMBER" maxlength="255"
-                                               value="<?= $arResult["USER_PHONE_NUMBER"] ?>"
-                                               class="form-control"/>
-                                    </div>
-                                </div>
                                 <div class="row form-group">
                                     <div class="col-md-12">
                                         <input type="hidden" name="captcha_sid"

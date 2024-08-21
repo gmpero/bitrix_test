@@ -58,7 +58,7 @@ $this->setFrameMode(true);
 
                                 </li>
                                 <li>
-                                    <span class="property-specs"><?=GetMessage("CT_BNL_FLOOR_COUNT")?></span>
+                                    <span class="property-specs"><?=GetMessage("CT_BNL_FLOOR")?></span>
                                     <span class="property-specs-number"><?= $arResult["DISPLAY_PROPERTIES"]["FLOOR_COUNT"]["VALUE"] ?></span>
 
                                 </li>
